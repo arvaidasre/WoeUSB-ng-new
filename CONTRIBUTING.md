@@ -1,6 +1,65 @@
 # Contributing Guidelines
 This document explains how to contribute to this project in many aspects. Please make sure to read this thoroughly before making any contributions.
 
+## Development Setup
+
+### Prerequisites
+- Python 3.8 or higher
+- Git
+- System dependencies (see README.md)
+
+### Setting up Development Environment
+1. Fork and clone the repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/WoeUSB-ng.git
+   cd WoeUSB-ng
+   ```
+
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install development dependencies:
+   ```bash
+   pip install -e ".[dev]"
+   # or
+   make install-dev
+   ```
+
+### Code Quality
+
+Before submitting code, ensure it meets our quality standards:
+
+```bash
+# Format code
+make format
+# or
+black WoeUSB/
+
+# Run linting
+make lint
+# or
+flake8 WoeUSB/
+mypy WoeUSB/ --ignore-missing-imports
+
+# Run tests
+make test
+# or
+pytest -v
+```
+
+### Building and Testing
+
+```bash
+# Build the package
+make build
+
+# Clean build artifacts
+make clean
+```
+
 ## Reporting Issues
 The so-called "issue" includes but is not limited to software bugs and suggestions
 

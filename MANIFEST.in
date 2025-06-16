@@ -1,5 +1,28 @@
+include README.md
+include CHANGELOG.md
+include COPYING
+include CONTRIBUTING.md
+include requirements*.txt
+include Makefile
+
+# Include package data
 graft WoeUSB/data
 graft WoeUSB/locale
 graft miscellaneous
-include README.md
+
+# Include scripts
 include WoeUSB/woeusbgui
+include WoeUSB/woeusb
+
+# Include documentation
+recursive-include doc *.rst *.py *.txt
+recursive-exclude doc/_build *
+
+# Exclude development files
+exclude .gitignore
+exclude development.patch
+exclude create_tarball
+recursive-exclude .github *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * *.egg-info
