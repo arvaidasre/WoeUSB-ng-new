@@ -29,35 +29,47 @@ This project rewrite of original [WoeUSB](https://github.com/slacka/WoeUSB)
 
 ## Installation
 
-### Arch
-```shell
-yay -S woeusb-ng
+### 🚀 One-Command Installation (Recommended)
+
+#### Complete Installation with Menu Integration
+```bash
+curl -sSL https://raw.githubusercontent.com/WoeUSB/WoeUSB-ng/main/install.sh | bash
 ```
 
-### For other distributions
-
-### 1. Install WoeUSB-ng's Dependencies
-#### Ubuntu
-
-```shell
-sudo apt install git p7zip-full python3-pip python3-wxgtk4.0 grub2-common grub-pc-bin parted dosfstools ntfs-3g
+#### Quick Install (Python package only)
+```bash
+curl -sSL https://raw.githubusercontent.com/WoeUSB/WoeUSB-ng/main/quick-install.sh | bash
 ```
 
-#### Fedora (tested on: Fedora Workstation 33)
-```shell
-sudo dnf install git p7zip p7zip-plugins python3-pip python3-wxpython4
+#### Windows (PowerShell as Administrator)
+```powershell
+irm https://raw.githubusercontent.com/WoeUSB/WoeUSB-ng/main/install.ps1 | iex
 ```
 
-### 2. Install WoeUSB-ng from PyPI
-```shell
+#### Add to Applications Menu (if not done automatically)
+```bash
+curl -sSL https://raw.githubusercontent.com/WoeUSB/WoeUSB-ng/main/makemenu.sh | bash
+```
+
+### Manual Installation
+
+#### From PyPI
+```bash
 pip install WoeUSB-ng
 ```
 
-### 3. Install from Source Code
-```shell
+#### From Source
+```bash
 git clone https://github.com/WoeUSB/WoeUSB-ng.git
 cd WoeUSB-ng
 pip install .
+```
+
+### Distribution Packages
+
+#### Arch Linux
+```bash
+yay -S woeusb-ng
 ```
 
 ## Development Setup
